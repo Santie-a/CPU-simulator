@@ -53,7 +53,6 @@ class Cache(Memory):
 
 	def replace_entry(self, address, data):
 		index = 0
-		print(data)
 		set_number = address % self.sets
 		index = self.cache_policy(set_number)
 		self.data[index] = {"tag": address, "data": data}
